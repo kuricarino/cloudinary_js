@@ -71,6 +71,60 @@
 	        .getParent().toDOM()
 	);
 
+	// watermark (overlay)
+	var tag = cloudinary.ImageTag.new("sample", {cloud_name: "demo"});
+	document.body.appendChild(
+		tag.transformation()
+			.overlay("cloudinary_icon_blue").chain()
+			.width(300)
+	        .getParent().toDOM()
+	);
+	document.body.appendChild(
+		tag.transformation()
+			.overlay("cloudinary_icon_blue").chain()
+	        .angle(15)
+	        .width(200)
+	        .crop("scale")
+	        .effect("grayscale")
+	        .getParent().toDOM()
+	);
+	document.body.appendChild(
+		tag.transformation()
+			.overlay("cloudinary_icon_blue").chain()
+	        .angle(-240)
+	        .width(200)
+	        .crop("scale")
+	        .effect("grayscale")
+	        .getParent().toDOM()
+	);
+
+	// saturation 50%
+	var tag = cloudinary.ImageTag.new("sample", {cloud_name: "demo"});
+	document.body.appendChild(
+		tag.transformation()
+			.effect("saturation:50").chain()
+			.width(300)
+	        .getParent().toDOM()
+	);
+	document.body.appendChild(
+		tag.transformation()
+			.effect("saturation:50").chain()
+	        .angle(15)
+	        .width(200)
+	        .crop("scale")
+	        .effect("grayscale")
+	        .getParent().toDOM()
+	);
+	document.body.appendChild(
+		tag.transformation()
+			// .effect("saturation:50").chain()
+			.effect("saturation:50")
+	        .angle(-240)
+	        .width(200)
+	        .crop("scale")
+	        .effect("grayscale")
+	        .getParent().toDOM()
+	);
 
 /***/ },
 /* 2 */
